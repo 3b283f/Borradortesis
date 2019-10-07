@@ -13,7 +13,9 @@
 /********        15 de Junio de 2013      ********/
 /*************************************************/
 
-#include <stdio.h>
+
+
+#include <stdio.h> /* Libreria de entrada y salida */
 #include <math.h>
 #include <stdlib.h>
 
