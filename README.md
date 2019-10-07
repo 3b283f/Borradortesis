@@ -5,8 +5,7 @@ Calcula los coeficientes de Lelyponov usando Metodo de ortonoralizacion
 
 ## Runge Kutta de Orden 4
 
-Razones para usar runge kutta
-
+* mirk4()
 ```
 derivadas = puntero a lista de derivadas
 t =  tiempo
