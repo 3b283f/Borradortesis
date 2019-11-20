@@ -22,3 +22,8 @@ Aqui va el codigo de la ecuacion
 \end{document}
 
 ```
+
+```
+pandoc -s ecuación.tex --template=default.latex-- -o salida.pdflatex
+
+```
