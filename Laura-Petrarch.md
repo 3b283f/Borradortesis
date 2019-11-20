@@ -34,6 +34,8 @@ Ahora insertar una imagen
 
 ![Description](images/index.jpeg)
 
+Para hacer las ecuaciones, primero hacerlas individualmente en un archivo y después insertarlas donde sea necesario, mediante una instrucción
+
 
 
 $\frac{x^2}{2} + \frac{1}{5}$
