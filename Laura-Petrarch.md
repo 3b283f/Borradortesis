@@ -14,5 +14,7 @@ o disminuirlos se pudiera crear una amplia variedad de comportamiento emocional,
 linealidad que presentan estos.
 
 
+$x^2$
+
 
 
