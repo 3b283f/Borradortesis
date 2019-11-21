@@ -4,14 +4,17 @@
 %reference: 'articulo1'
 %...
 
-\documentclass{article}
+%\documentclass{article}
 
-\begin{document}
+%\begin{document}
 
 \begin{eqnarray*}
-  \frac{dL(t)}{dt} &=& -a_{L}(L(t)) + \beta_{L}(P(1-(\frac{P}{\gamma_{L}}))) + B_{L}(A_{p}) \\
-  \frac{dP(t)}{dt} &=& -a_{P}(P(t)) + \beta_{P}(L(t)) + \beta_{P}\frac{A_{L}}{1+D_{P}(I_{P}(t))} \\
-  \frac{dIp(t)}{dt} &=& -a_{IP}I_{P}(t) + B_{IP}(P(t))
+  \frac{dL(t)}{dt} &= -\alpha_{L}L(t) + \beta_{L}P\left(1-\left(\frac{P}{\gamma_{L}}\right)^{2}\right) + \beta_{L}(A_{P}) \\
+  \frac{dP(t)}{dt} &= -\alpha_{P}P(t) + \beta_{P}L(t) + \beta_{P}\frac{A_{L}}{1+\delta_{P}I_{P}(t)} \\
+  \frac{dI_{P}(t)}{dt} &= -\alpha_{IP}I_{P}(t) + \beta_{IP}P(t)
 \end{eqnarray*}
 
-\end{document}
+%\end{document}
+
+%El **\left(** al principio y al final **\right)** sirve para hacer los paréntesis
+%tan grandes como la expresión matemática lo requiera

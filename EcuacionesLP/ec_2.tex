@@ -1,17 +1,6 @@
-%---
-%title: 'Añadiendo la inspiración de Petrarch'
-%label: 'Cauchy'
-%reference: 'articulo1'
-%...
-
-\documentclass{article}
-
-\begin{document}
 
 \begin{eqnarray*}
-  \frac{dL(t)}{dt} &=& -a_{L}(L(t)) + R_{L}(P(t)) + B_{L}(A_{p}) \\
-  \frac{dP(t)}{dt} &=& -a_{P}(P(t)) + R_{P}(L(t)) + B_{P}\frac{A_{L}}{1+D_{P}(I_{P}(t))} \\
-  \frac{dIp(t)}{dt} &=& -a_{IP}Ip(t) + B_{IP}(P(t))
+  \frac{dL(t)}{dt} &= -\alpha_{L}L(t) + R_{L}(P(t)) + \beta_{L}A_{P} \\
+  \frac{dP(t)}{dt} &= -\alpha_{P}P(t) + R_{P}(L(t)) + \beta_{P}\frac{A_{L}}{1+\delta_{P}I_{P}(t)} \\
+  \frac{dI_{P}(t)}{dt} &= -\alpha_{IP}I_{P}(t) + \beta_{IP}P(t)
 \end{eqnarray*}
-
-\end{document}
