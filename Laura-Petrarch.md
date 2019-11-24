@@ -17,8 +17,59 @@ Para crear este modelo, se baso en una dinámica de tipo depredador-presa, esta 
 - $P(t)$ representa el amor de Petrarch por Laura.
 
 A partir de esto obtuvo un modelo general, dado por dos EDO, donde cada una de estas ecuaciones se componía de tres términos diferentes:
+
 - El primero, describe el proceso de olvido de cada individuo, por lo que le otorgaba un signo negativo.
 - El segundo, es la reacción de uno de ellos con respecto al amor del otro.
 - El tercero, es la respuesta a su atracción.
 
-Sin embargo, se dio cuenta de que su modelo no estaba completo y agrego un termino más para la inspiración de Petrarch,que describe su productividad para crear los poemas influenciado por la atracción que siente hacia Laura.  
+Sin embargo, se dio cuenta de que su modelo no estaba completo y agrego un termino más para la inspiración de Petrarch $I_{P}(t)$, que describe su productividad para crear los poemas influenciado por la atracción que siente hacia Laura. Además se dio cuenta de que las funciones de reacción no eran completamente no lineales, Por lo que agrego unos parámetros adicionales para completar cada una de las funciones de reacción, de la siguiente forma:
+
+- Para la función de reacción de Petrarch, se observa en sus poemas que él reacciona de manera muy intensa a los signos más relevantes de antagonismo.
+- Para la función de reacción  de Laura, analizando para diferentes valores de de P:
+  - Cuando P>0, primero aumenta y después decrece.
+  - Cuando P<0, es decir, para cuando el poeta desespera, Laura se comporta de manera inesperada, ya que cambia su actitud por un sentimiento de pena hacia Petrarch.  
+  De manera que propone la función de reacción como una función cúbica.  
+
+Sustituyendo estos términos en el último modelo, se obtiene las ecuaciones del **modelo completo**.
+
+---
+El modelo completo de Laura-Petrarch se compone de:
+
+**1. "3 constantes de tiempo":**
+
+  - $\alpha_{L}$, proceso de olvido de Laura.
+  - $\alpha_{P}$, proceso de olvido de Petrarch.
+  - $\alpha_{IP}$, describe la forma en que se comporta la inspiración de Petrarch conforme pasa el tiempo.
+
+Para estas siempre se debe cumplir que:
+
+- **$\alpha_{L}$** **> $\alpha_{P}$**, ya que Laura nunca parece estar muy involucrada, mientras Petrarch parece siempre estar muy interesado.
+- **$\alpha_{IP}$** **< $\alpha_{P}$**, debido a que la inspiración del poeta disminuye muy lentamente, ya que continua escribiendo por más de 10 años después de la muerte de Laura, pero ya no sobre su amor por Laura, sino acerca de su recuerdo y la forma en la que esperaba que la muerte llegará a él. Esto es:
+
+- $\alpha_{L}$ ~ $3\cdot\alpha_{P}$,
+- $\alpha_{P}$ ~ $10\cdot\alpha_{IP}$,
+- $\alpha_{P}$ ~ $1$.
+
+**2. "3 parámetros de reacción o ganancia":**
+
+  - $\beta_{L}$,
+  - $\beta_{P}$,
+  - $\beta_{IP}$
+
+Estas se pueden estimar cualitativamente con respecto a las contantes de tiempo. Así:
+
+  - $\beta_{L}$ ~ $\alpha_{P}$, la reacción de Laura es igual al tiempo de olvido de Petrarch.
+  - $\beta_{P}$ ~ $5\cdot\alpha_{P}$, la reacción de Petrarch es 5 veces más fuerte que su proceso de olvido.
+  - $\beta_{IP}$ ~ $10\cdot\alpha_{P}$.
+  - $\gamma_{L}$ y $\delta_{P}$ son normalizados a uno, por simplicidad.
+**3. "2 parámetros de atracción":**  
+
+ Significan cuanto resulta atractivo tanto física, como social e intelectualmente, el uno para el otro. Su elección es fundamental ya que determinan la no linealidad del modelo. Estos cumplen que:
+
+ - $A_{L} > 0$, ya que Petrarch ama a Laura.
+ - $A_{P} < 0$, ya que Petrarch no resulta del todo atractivo para Laura, es un joven interesado en la historia y las letras, al que se le otorga un cargo que lo lleva a viajar frecuentemente al lugar donde vive Laura, de hecho el primer poema que le escribe es hasta después de 3 meses de conocerla.
+
+Por lo tanto, los valores que se le otorgan a estos parámetros son:
+
+  - $A_{L}$ ~ $2$,
+  - $A_{P}$ ~ $-1$.    
