@@ -1,5 +1,6 @@
 """
 Lorenz attractor (Runge-Kutta method)
+Modelo de Laura-Petrach
 """
 import sys
 import traceback
@@ -93,13 +94,13 @@ def lorenz(xyz, p=10, r=28, b=8/3.0):
 ### Programa Principal
 
 file = open("entrada.txt","r")
-#list(map(int,
+
 datosIniciales = list(map(int,file.readline().replace("\n","").split(',')))
 incremento =float(file.readline().replace("\n",""))
 numDatos = int(file.readline().replace("\n",""))
 
 print(datosIniciales,incremento,numDatos)
-#datos = rungekutta2([1,2,3],0.003,100000)
+#datos = rungekutta2([1,2,3],0.003,100000) otra forma de poner los datos
 datos = rungekutta2(datosIniciales,incremento,numDatos)
-grafica(datos,"Laura Noze Que")
+grafica(datos,"Modelo Laura-Petrarch")
 #print(datos)
